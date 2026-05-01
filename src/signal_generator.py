@@ -12,7 +12,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from src.anomaly_detector import IndexState, detect_all
+from anomaly_detector import IndexState, detect_all
 
 
 # ─────────────────────────────────────────────────────────────────
