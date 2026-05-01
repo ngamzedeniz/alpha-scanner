@@ -17,9 +17,9 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from src.anomaly_detector import detect_all
-from src.signal_generator import generate_signal
-from src.data_fetcher import fetch_all
+from anomaly_detector import detect_all
+from signal_generator import generate_signal
+from data_fetcher import fetch_all
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
