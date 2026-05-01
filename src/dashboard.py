@@ -124,7 +124,7 @@ with st.sidebar:
     - 🌤️ Weather forecasts
     - 🌪️ Atmospheric anomalies
 
-    *Built as a portfolio piece for energy meteorology roles.*
+    *Built as a portfolio piece by Gamze Deniz ngamzedeniz[@]gmail.com.*
     """)
 
     st.markdown("---")
