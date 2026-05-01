@@ -17,6 +17,12 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
+import sys
+from pathlib import Path
+
+# Add src/ to Python path so imports work on Streamlit Cloud
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 from anomaly_detector import detect_all
 from signal_generator import generate_signal
 from data_fetcher import fetch_all
@@ -314,7 +320,7 @@ st.markdown("---")
 st.markdown(
     """
     <p style="text-align: center; color: #6B7280; font-size: 0.85rem;">
-    Built with ❤️ for energy meteorology. Data: NOAA CPC (public domain).<br>
+    Data: NOAA CPC (public domain).<br>
     <em>"The job of an energy meteorologist isn't to forecast the weather.
     It's to forecast where the market is wrong about the weather."</em>
     </p>
