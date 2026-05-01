@@ -162,11 +162,10 @@ else:
 
 ## 🎓 Background & Motivation
 
-This project was built as a portfolio piece for an **Energy Meteorologist** role at **EDF Trading**.
 
 **Core thesis:** A meteorologist's value to a trading desk isn't producing forecasts — it's identifying when the meteorological reality diverges from market expectations. That divergence is alpha.
 
-*(Bu proje EDF Trading'deki Energy Meteorologist rolü için portföy çalışması olarak yapıldı. Temel tez: Bir meteorolog'un trading desk'e değeri tahmin üretmek değil, meteorolojik gerçeğin piyasa beklentisinden ne zaman saptığını tespit etmektir. Bu sapma = alpha.)*
+*( Temel tez: Bir meteorolog'un trading desk'e değeri tahmin üretmek değil, meteorolojik gerçeğin piyasa beklentisinden ne zaman saptığını tespit etmektir. Bu sapma = alpha.)*
 
 ---
 
@@ -191,8 +190,8 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 Built by **[Your Name]** as a portfolio project.
 
-**Contact:** [your.email@example.com](mailto:your.email@example.com)
-**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+**Contact:** [your.email@example.com](mailto:ngamzedeniz.gmail@example.com)
+**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/ngamzedeniz)
 
 ---
 
