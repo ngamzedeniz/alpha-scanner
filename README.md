@@ -188,10 +188,10 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ## 👤 Author
 
-Built by **[Your Name]** as a portfolio project.
+Built by **[N Gamze Deniz]** as a portfolio project.
 
-**Contact:** [your.email@example.com](mailto:ngamzedeniz.gmail@example.com)
-**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/ngamzedeniz)
+**Contact:** [ngamzedeniz@gmail.com](mailto:ngamzedeniz@.com)
+**LinkedIn:** [linkedin.com/in/ngamzedeniz](https://linkedin.com/in/ngamzedeniz)
 
 ---
 
