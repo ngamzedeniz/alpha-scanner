@@ -28,6 +28,8 @@ THRESHOLDS = {
     },
     "ao": {
         "strong_positive": 1.5,
+        "weak_positive": 0.5,
+        "weak_negative": -0.5,
         "strong_negative": -1.5,
     },
     "oni": {
@@ -143,8 +145,17 @@ def classify_ao(value: float) -> IndexState:
             current_value=value,
             regime="Strong AO-",
             severity="strong",
-            market_impact="Polar vortex disrupted — cold air spilling south",
+            market_impact="Polar vortex disrupted — cold air spilling south to Europe",
             color="#F87171",
+        )
+    elif value <= t["weak_negative"]:
+        return IndexState(
+            name="AO",
+            current_value=value,
+            regime="Weak AO-",
+            severity="moderate",
+            market_impact="Polar vortex weakening — monitor for cold air risk",
+            color="#FCA5A5",
         )
     elif value >= t["strong_positive"]:
         return IndexState(
@@ -154,6 +165,15 @@ def classify_ao(value: float) -> IndexState:
             severity="strong",
             market_impact="Strong polar vortex — cold confined to Arctic, mild Europe",
             color="#34D399",
+        )
+    elif value >= t["weak_positive"]:
+        return IndexState(
+            name="AO",
+            current_value=value,
+            regime="Weak AO+",
+            severity="moderate",
+            market_impact="Polar vortex stable — mild tendency, low cold risk",
+            color="#6EE7B7",
         )
     else:
         return IndexState(
