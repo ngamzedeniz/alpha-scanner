@@ -71,9 +71,9 @@ def _vote(state: IndexState) -> int:
             return -1
 
     if state.severity == "moderate":
-        if "La Niña" in state.regime:
+        if "NAO-" in state.regime or "AO-" in state.regime or "La Niña" in state.regime:
             return +1
-        if "El Niño" in state.regime:
+        if "NAO+" in state.regime or "AO+" in state.regime or "El Niño" in state.regime:
             return -1
 
     return 0
