@@ -23,6 +23,16 @@ Step 6: If the total score is high and positive, it triggers a strong buy signal
 Step 7: If the total score is low and negative, it triggers a strong sell signal.
 Step 8: Higher total scores automatically increase the confidence percentage up to 95%.
 Step 9: Finally, a TradingSignal object is returned to display on a live trading dashboard.
+
+Example:
+"If only the NAO index indicates cold weather, the score becomes +2.
+The system then gives a 71% confidence level (calculated as 65 + 2 * 3), 
+signaling: 'Yes, there could be an upward trend, but I am not entirely certain.'
+
+""However, if the NAO, AO, and La Niña all point to cold weather at the same time, the score jumps to +5 or +6. 
+Recognizing that all indicators align in the same direction, 
+the system signals: 'Everything is pointing toward the same outcome, this is a great opportunity!' 
+and pushes the confidence score to its ceiling limit of 95%."
 """
 
 from __future__ import annotations
