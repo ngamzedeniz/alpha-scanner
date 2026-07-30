@@ -110,6 +110,36 @@ def generate_signal(states: dict[str, IndexState] | None = None) -> TradingSigna
 
     # Build rationale (Gerekçe oluştur)
     for name, state in states.items():
+    # =================================================================
+    # FUTURE WORK: MARKET EXPECTATION INTEGRATION (PHASE 2)
+    # =================================================================
+    # PURPOSE: To fulfill the core thesis of calculating the "divergence"
+    # between atmospheric reality (weather_score) and market pricing.
+    # By ingesting public data (EIA, AGSI+, ENTSO-E, yfinance), the engine
+    # will penalize priced-in consensus and amplify true alpha signals.
+    #
+    # @dataclass
+    # class MarketExpectationContext:
+    #     storage_deviation_vs_5y: float = 0.0  # e.g., AGSI+ gas storage buffer %
+    #     front_month_price_trend: str = "FLAT"  # e.g., yfinance front-month futures trend
+    #     market_sentiment: str = "NEUTRAL"     # "PRICED_FOR_COLD" | "PRICED_FOR_WARM"
+    #
+    # # Step 1: Fetch live baseline from public endpoints
+    # market_context = _fetch_public_market_data()
+    #
+    # # Step 2: Calculate Divergence and Adjust Signal Metrics
+    # # Case A: Atmosphere is bullish (cold), but market already priced it in.
+    # if total_score > 0 and market_context.market_sentiment == "PRICED_FOR_COLD":
+    #     confidence -= 15  # Alpha decays because the market already expects the cold.
+    #     rationale.append("Warning: Atmospheric cold is heavily priced-in by the market.")
+    #
+    # # Case B: True Alpha Divergence (Atmosphere is cold, but market prices warm/flat)
+    # elif total_score > 0 and market_context.market_sentiment == "PRICED_FOR_WARM":
+    #     confidence = min(confidence + 10, 98)  # High conviction alpha expansion.
+    #     rationale.append("ALPHA DIVERGENCE: Market expects warm/neutral, but atmospheric reality is COLD.")
+    # =================================================================
+
+        
         if state.severity != "neutral":
             rationale.append(f"{state.name}: {state.regime} ({state.current_value:+.2f}) → {state.market_impact}")
         else:
