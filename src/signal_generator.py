@@ -6,6 +6,23 @@ Combines anomaly states into trading signals.
 
 The core "alpha" logic: when multiple indices align in cold/bullish
 or warm/bearish direction, confidence increases.
+What the Code Does
+Reads Weather Data: It takes climate data like NAO, AO, and El Niño from an external detector.
+Calculates a Score: It translates these complex climate states into simple mathematical numbers.
+Gives Trading Advice: It outputs a directional trading signal like "LONG POWER" or "SHORT POWER".
+Measures Confidence: It calculates a specific confidence percentage for the generated signal.
+Explains the Reason: It automatically creates a checklist of supporting reasons for the trader.
+Highlights Risks: It lists major threat factors that could break the trading signal.
+How the Code Works
+Step 1: The function generate_signal starts by collecting all current weather data.
+Step 2: The private function _vote checks how severe each weather pattern is.
+Step 3: Cold and disrupted weather patterns receive positive points like +1 or +2.
+Step 4: Warm and windy weather patterns receive negative points like -1 or -2.
+Step 5: The engine sums all points together to calculate a total_score.
+Step 6: If the total score is high and positive, it triggers a strong buy signal.
+Step 7: If the total score is low and negative, it triggers a strong sell signal.
+Step 8: Higher total scores automatically increase the confidence percentage up to 95%.
+Step 9: Finally, a TradingSignal object is returned to display on a live trading dashboard.
 """
 
 from __future__ import annotations
